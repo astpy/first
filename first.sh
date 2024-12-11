@@ -64,7 +64,11 @@ rosdep update
 sudo apt -y install gthumb
 
 # Install Tweaks
-sudo apt install gnome-tweaks
+sudo apt -y install gnome-tweaks
+
+# Install terminator
+sudo add-apt-repository ppa:mattrose/terminator
+sudo apt -y install terminator
 
 # Re-install NVIDIA GPU Driver
 sudo apt -y purge nvidia-*
