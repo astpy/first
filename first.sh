@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Change names of directories
+LANG=C xdg-user-dirs-gtk-update
+
 # Delete thunderbird
 sudo apt -y remove thunderbird
 
@@ -8,9 +11,6 @@ sudo apt update
 sudo apt -y dist-upgrade
 sudo apt -y autoremove
 sudo apt -y autoclean
-
-# Change names of directories
-LANG=C xdg-user-dirs-gtk-update
 
 # Install fcitx-mozc
 sudo apt -y install fcitx-mozc
@@ -51,14 +51,17 @@ sudo rosdep init
 rosdep update
 
 # Install mirage
-echo "Please check http://blawat2015.no-ip.com/~mieki256/diary/202105024.html"
-mkdir -p ~/Downloads/mirage
-cd ~/Downloads/mirage
-wget http://old-releases.ubuntu.com/ubuntu/pool/main/e/exiv2/libexiv2-14_0.25-4ubuntu2.2_amd64.deb
-wget http://old-releases.ubuntu.com/ubuntu/pool/universe/p/pyexiv2/python-pyexiv2_0.3.2-9_amd64.deb
-wget http://old-releases.ubuntu.com/ubuntu/pool/universe/p/pygtk/python-gtk2_2.24.0-6_amd64.deb
-wget http://old-releases.ubuntu.com/ubuntu/pool/universe/m/mirage/mirage_0.9.5.2-1_amd64.deb
-sudo apt-get install ./*.deb
+# echo "Please check http://blawat2015.no-ip.com/~mieki256/diary/202105024.html"
+# mkdir -p ~/Downloads/mirage
+# cd ~/Downloads/mirage
+# wget http://old-releases.ubuntu.com/ubuntu/pool/main/e/exiv2/libexiv2-14_0.25-4ubuntu2.2_amd64.deb
+# wget http://old-releases.ubuntu.com/ubuntu/pool/universe/p/pyexiv2/python-pyexiv2_0.3.2-9_amd64.deb
+# wget http://old-releases.ubuntu.com/ubuntu/pool/universe/p/pygtk/python-gtk2_2.24.0-6_amd64.deb
+# wget http://old-releases.ubuntu.com/ubuntu/pool/universe/m/mirage/mirage_0.9.5.2-1_amd64.deb
+# sudo apt-get install ./*.deb
+
+# Install gthumb
+sudo apt -y install gthumb
 
 # Install Tweaks
 sudo apt install gnome-tweaks
